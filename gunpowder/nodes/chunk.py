@@ -16,7 +16,7 @@ class Chunk(BatchFilter):
     def __init__(self, chunk_spec):
 
         self.chunk_spec_template = chunk_spec
-        self.dims = self.chunk_spec_template.volumes[self.chunk_spec_template.volumes.keys()[0]].dims()
+        self.dims = self.chunk_spec_template.volumes[list(self.chunk_spec_template.volumes.keys())[0]].dims()
 
         for volume_type in self.chunk_spec_template.volumes:
             assert self.dims == self.chunk_spec_template.volumes[volume_type].dims(),\
