@@ -24,9 +24,9 @@ class ChunkTestSource(BatchProvider):
 
             # the z,y,x coordinates of the ROI
             meshgrids = np.meshgrid(
-                    range(roi.get_begin()[0], roi.get_end()[0]),
-                    range(roi.get_begin()[1], roi.get_end()[1]),
-                    range(roi.get_begin()[2], roi.get_end()[2]), indexing='ij')
+                    range(int(roi.get_begin()[0]), int(roi.get_end()[0])),
+                    range(int(roi.get_begin()[1]), int(roi.get_end()[1])),
+                    range(int(roi.get_begin()[2]), int(roi.get_end()[2])), indexing='ij')
             data = meshgrids[0] + meshgrids[1] + meshgrids[2]
 
             # print("Roi is: " + str(roi))
@@ -66,9 +66,9 @@ class TestChunk(ProviderTest):
 
             # the z,y,x coordinates of the ROI
             meshgrids = np.meshgrid(
-                    range(volume.roi.get_begin()[0], volume.roi.get_end()[0]),
-                    range(volume.roi.get_begin()[1], volume.roi.get_end()[1]),
-                    range(volume.roi.get_begin()[2], volume.roi.get_end()[2]), indexing='ij')
+                    range(int(volume.roi.get_begin()[0]), int(volume.roi.get_end()[0])),
+                    range(int(volume.roi.get_begin()[1]), int(volume.roi.get_end()[1])),
+                    range(int(volume.roi.get_begin()[2]), int(volume.roi.get_end()[2])), indexing='ij')
             data = meshgrids[0] + meshgrids[1] + meshgrids[2]
 
             self.assertTrue((volume.data == data).all())
