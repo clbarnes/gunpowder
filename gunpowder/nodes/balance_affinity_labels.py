@@ -1,3 +1,5 @@
+from __future__ import division
+
 from .batch_filter import BatchFilter
 from gunpowder.volume import VolumeTypes, Volume
 import logging

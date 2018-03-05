@@ -1,3 +1,5 @@
+from __future__ import division
+
 from .provider_test import ProviderTest
 from gunpowder import *
 import numpy as np

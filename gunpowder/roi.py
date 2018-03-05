@@ -1,3 +1,4 @@
+from __future__ import division
 from .coordinate import Coordinate
 from .freezable import Freezable
 

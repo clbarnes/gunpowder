@@ -1,3 +1,5 @@
+from __future__ import division
+
 import sys
 from gunpowder import *
 from gunpowder.caffe import *
@@ -18,7 +20,7 @@ def predict_affinities(gpu):
     output_size = Coordinate((92,)*3)
 
     # the size of the receptive field of the network
-    context = (input_size - output_size)/2
+    context = (input_size - output_size)//2
 
     # a chunk request that matches the dimensions of the network, will be used 
     # to chunk the whole volume into batches of this size

@@ -1,3 +1,5 @@
+from __future__ import division
+
 from random import randint
 from skimage.transform import integral_image, integrate
 import logging
