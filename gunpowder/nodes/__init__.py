@@ -4,6 +4,7 @@ from .add_gt_affinities import AddGtAffinities
 from .balance_labels import BalanceLabels
 from .batch_filter import BatchFilter
 from .batch_provider import BatchProvider
+from .catmaid_source import CatmaidSource
 from .crop import Crop
 from .csv_points_source import CsvPointsSource
 from .defect_augment import DefectAugment

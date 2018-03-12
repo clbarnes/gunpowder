@@ -4,6 +4,7 @@ from .add_boundary_distance_gradients import TestAddBoundaryDistanceGradients
 from .add_gt_affinities import TestAddGtAffinities
 from .add_vector_map import TestAddVectorMap
 from .balance_labels import TestBalanceLabels
+from .catmaid_source import TestCatmaidSource
 from .crop import TestCrop
 from .downsample import TestDownSample
 from .dvid_source import TestDvidSource
