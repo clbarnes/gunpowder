@@ -23,8 +23,12 @@ before_install:
   - source activate gp-env
 
 install:
+  - which conda
   - conda install -c cpape -c conda-forge z5py
+  - which pip
   - make install-full
 
 script:
+  - which python
+  - python -c "import z5py"
   - make test
